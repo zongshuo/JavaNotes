@@ -1,0 +1,12 @@
+Reader:字符输入流，是所有的输入字符流的父类，它是一个抽象类。
+子类：
+    1、BufferedReader：缓存读取类
+    2、CharArrayReader：提供缓冲区
+    3、FilterReader：抽象类，获取已过滤的流
+        子类：
+        1、PushbackReader:
+    4、InputStreamReader：字节流转字符流
+        子类：
+        1、FileReader:该类按字符读取流中的数据。
+    5、PipedReader：管道字符输入流，用于线程间使用管道进行通信。
+    6、StringReader：字符串输入流，本质就是字符串。

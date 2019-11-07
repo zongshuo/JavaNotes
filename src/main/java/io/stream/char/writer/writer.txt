@@ -1,0 +1,11 @@
+writer:字符输出流，是一个抽象类，是所有输出字符流的父类。
+子类：
+    1、BufferedWriter
+    2、OutputStreamWriter
+        子类：
+        1、FileWriter
+    3、PrinterWriter
+    4、StringWriter
+    5、PipedWriter
+    6、CharArrayWriter
+    7、FilterWriter
