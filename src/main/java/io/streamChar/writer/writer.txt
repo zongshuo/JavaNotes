@@ -1,9 +1,18 @@
 writer:字符输出流，是一个抽象类，是所有输出字符流的父类。
+    该类和子类中的write方法默认会把源文件中的内容覆盖掉。
+    可以在构造时使用可以追加内容的构造：FileWriter(File file, boolean append);
 子类：
-    1、BufferedWriter
-    2、OutputStreamWriter
+    1、BufferedWriter：构造中接收Writer类型的对象。
+        方法：
+        a、writer(String)
+        b、writer(char [], int off, int len)
+        c、flush：刷新缓冲区
+        d、close：关闭缓冲流
+    2、OutputStreamWriter：字节输出流转成字符输出流，构造中接收字节输出流
         子类：
-        1、FileWriter
+        1、FileWriter：字符输出流
+            a、FileWriter(File file)、FileWriter(File file, boolean append)
+    //TODO 后续怎么用？
     3、PrinterWriter
     4、StringWriter
     5、PipedWriter

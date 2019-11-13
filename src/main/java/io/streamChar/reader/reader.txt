@@ -1,6 +1,21 @@
 Reader:字符输入流，是所有的输入字符流的父类，它是一个抽象类。
 子类：
-    1、BufferedReader：缓存读取类
+    1、BufferedReader：缓冲读取字符流。
+        A、构造
+            a、创建一个使用默认大小输入缓冲区的缓冲字符输入流（默认8192个字符，2kb）。
+                BufferedReader(Reader in)
+            b、创建一个使用指定大小输入缓冲区的缓冲字符输入流。
+                BufferedReader(Reader in, int sz)
+        B、方法
+            a、read return int：每次读取一个字符，文件末尾时返回-1。
+                需要将返回的int强制转换为char。
+            b、readLine return String：每次读取一行，文件末尾返回null。
+                每次返回的字符数不固定,可能超出缓冲字符的个数。
+            c、read(char [] cBuf, int off, int len) return int（读到的字符个数）:
+                推荐，每次读取len个字符放置在cBuf中，从off下标开始。
+                相比于其他的读取方式更加灵活。
+            d、skip（long n）：跳过n个字符。
+            e、
     2、CharArrayReader：提供缓冲区
     3、FilterReader：抽象类，获取已过滤的流
         子类：
@@ -8,6 +23,7 @@ Reader:字符输入流，是所有的输入字符流的父类，它是一个抽�
     4、InputStreamReader：字节流转字符流
         子类：
         A、FileReader:该类按字符读取流中的数据。
+            文件编码格式与项目编码格式不一致时会有乱码问题，可以通过字节输入流设定字符编码，再转换成字符输入流。
             a、在给定从中读取数据的 File 的情况下创建一个新 FileReader。
                 FileReader(File file)
             b、在给定从中读取数据的 FileDescriptor 的情况下创建一个新 FileReader。
@@ -16,3 +32,5 @@ Reader:字符输入流，是所有的输入字符流的父类，它是一个抽�
                 FileReader(String fileName)
     5、PipedReader：管道字符输入流，用于线程间使用管道进行通信。
     6、StringReader：字符串输入流，本质就是字符串。
+
+    //TODO 其他类怎么用？

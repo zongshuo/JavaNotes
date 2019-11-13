@@ -1,15 +1,16 @@
-File:底层文件系统访问类，以抽象的方式代表文件名和目录路径名。
-    该类主要用于文件和目录的创建、文件的查找和文件的删除等。
-    File对象代表目录中实际存在的文件和目录
-创建实例：
-    1、通过给定的父抽象路径名和子路径名字符串创建一个新的File实例。
-        File(File parent, String child);
-    2、通过将给定路径名字符串转换成抽象路径名来创建一个新 File 实例。
-        File(String pathname)
-    3、根据 parent 路径名字符串和 child 路径名字符串创建一个新 File 实例。
-        File(String parent, String child)
-    4、通过将给定的 file: URI 转换成一个抽象路径名来创建一个新的 File 实例。
-        File(URI uri)
-方法：
-    1、exists：文件或目录存在就返回true
-    2、isFile：文件存在且是一个标准文件，才返回true
+一、File:底层文件系统访问类，以抽象的方式代表文件名和目录路径名。
+        该类主要用于文件和目录的创建、文件的查找和文件的删除等。
+        File对象代表目录中实际存在的文件和目录
+    创建实例：
+        1、通过给定的父抽象路径名和子路径名字符串创建一个新的File实例。
+            File(File parent, String child);
+        2、通过将给定路径名字符串转换成抽象路径名来创建一个新 File 实例。
+            File(String pathname)
+        3、根据 parent 路径名字符串和 child 路径名字符串创建一个新 File 实例。
+            File(String parent, String child)
+        4、通过将给定的 file: URI 转换成一个抽象路径名来创建一个新的 File 实例。
+         File(URI uri)
+    方法：
+        1、exists：文件或目录存在就返回true
+        2、isFile：文件存在且是一个标准文件，才返回true
+二、FileDescriptor：文件描述符对象 //TODO 怎么用？
