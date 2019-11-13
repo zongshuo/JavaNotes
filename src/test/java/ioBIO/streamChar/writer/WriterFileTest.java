@@ -1,6 +1,5 @@
-package io.streamChar.writer;
+package ioBIO.streamChar.writer;
 
-import com.sun.xml.internal.bind.v2.TODO;
 import org.junit.After;
 import org.junit.Assert;
 import org.junit.Rule;
@@ -13,8 +12,6 @@ import java.io.FileNotFoundException;
 import java.io.Writer;
 import java.nio.charset.Charset;
 import java.nio.file.FileSystemException;
-
-import static org.junit.Assert.*;
 
 /**
  * Created by DEll on 2019-11-12.

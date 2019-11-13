@@ -1,6 +1,6 @@
-package io.streamChar.reader;
+package ioBIO.streamChar.reader;
 
-import io.streamChar.writer.WriterFile;
+import ioBIO.streamChar.writer.WriterFile;
 import org.junit.After;
 import org.junit.Assert;
 import org.junit.Rule;

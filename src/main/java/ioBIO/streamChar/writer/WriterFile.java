@@ -1,4 +1,4 @@
-package io.streamChar.writer;
+package ioBIO.streamChar.writer;
 
 import java.io.*;
 import java.nio.charset.Charset;
