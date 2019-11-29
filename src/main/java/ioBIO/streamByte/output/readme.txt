@@ -9,3 +9,5 @@ outputStream：输出字节流类，是一个抽象类，所有输出字节流�
     3、ObjectOutputStream：装饰流，用于对象的输出（序列化）。
     4、PipedOutputStream：向与其他线程共用的管道中写入字节。
     5、ByteArrayOutputStream：向byte数组中写入字节。
+缓冲流：
+    1、BufferedOutputStream：缓冲字节流，可指定缓冲区大小，默认8K。

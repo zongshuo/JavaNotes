@@ -22,3 +22,5 @@ inputStream：输入字节流，是一个抽象类，所有输入字节流的父
     6、StringBufferedInputStream：从StringBuffer中读取数据
     7、ByteArrayInputStream：从Byte数组中读取数据
     //TODO 其他类怎么用？
+缓冲流：
+    1、BufferedInputStream：输入字节缓冲流

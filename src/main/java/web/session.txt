@@ -1,0 +1,19 @@
+Session和Cookies的联系和区别
+    保存客户端和服务端会话数据的两种技术是Session和Cookies。
+    cookies是key和value形式的数据，保存在客户端。javax.servlet.http.Cookie用于创建cookie的包。
+    Response接口定义了addCookie方法，可以在响应头中增加set-cookie头字段。
+    Request中也定义了getCookies方法，可以获取客户端提交的cookie。
+    注意：
+        cookie的setMaxAge的方法单位为秒，当设置为-1时，浏览器关闭则Cookie自动从浏览器删除。
+        删除cookie时，不光要设置maxAge为0，还有把path和doMin设置和新增时一致。
+    Session时保存在服务器的每个用户独享的对象，javax.servlet.http.HttpSession使用request对象的getSession方法得到服务器session。
+    Tomcat中session的默认失效时长时20min，失效则删除。
+
+服务器集群的Session管理：
+    1、Session复制，每台服务器都保存全部的客户session
+        缺点：集群量大时，会进行大量的通信，内存不够
+    2、session绑定：利用负载均衡将来源于同一个IP的所有请求分发到相同的服务器。
+        缺点：不符合对系统高可用的需求，一旦某台服务器宕机，则该服务器上的session消失。
+    3、利用cookie记录session
+        缺点：大小受cookie限制，浏览器禁用cookie问题
+    4、session服务器：利用独立部署的session服务器（集群）统一管理session，实际上就是将服务器分成有状态和无状态两类。

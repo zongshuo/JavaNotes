@@ -1,0 +1,13 @@
+web.xml中配置的内容
+    1、监听器
+    2、过滤器
+    3、servlet相关参数
+    4、会话超时时间
+    5、安全验证方式
+    6、错误页面
+
+Servlet和jsp的区别：
+    1、jsp经编译后变成servlet
+    2、jsp更擅长表现页面展示、servlet更擅长逻辑控制
+    3、servlet中没有内置对象，jsp中有
+    4、jsp是servlet的扩展，本质上就是servlet的简易方式

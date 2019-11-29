@@ -1,0 +1,14 @@
+spring整合hibernate
+    1、使用spring的ORM模块
+        对于web项目，容器（Tomcat、JBoss）启动时会先扫描web.xml文件，读取文件中的内容并初始化。
+        web.xml主要配置listener、Filter、Servlet以及全局参数（context-param）。容器会首先创建ServletContext上下文，用于项目所有部分共享。
+        内容的加载顺序：context-param-->listener-->filter-->servlet
+    2、采用spring框架的web.xml配置
+        <context-param>
+            <param-name>contextConfigLocation</param-name>
+            <param-value>classpath:applicationContext.xml</param-value>
+        <context-param>
+        <listener>
+            <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+        </listener>
+    3、spring配置文件

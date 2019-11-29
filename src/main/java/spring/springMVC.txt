@@ -1,0 +1,9 @@
+springMVC的原理：
+    1、用户发送请求至前端控制器DispatcherServlet
+    2、控制器收到请求调用HandlerMapping映射器
+    3、映射器找到具体的处理器（xml注解），生成处理器对象及拦截器并返回给控制器
+    4、控制器调用适配器适配后调用具体处理器（controller）
+    5、Controller执行并返回ModeAndView
+    6、适配器HandlerAdapter将处理器的执行结果返回控制器
+    7、控制器将结果传给ViewResolver视图解析器，解析后返回具体view
+    8、将view渲染成视图后响应给客户
